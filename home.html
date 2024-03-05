@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bg.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script
+      src="https://kit.fontawesome.com/094df3e6f8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <header class="navBar">
+      <i class="fa-brands fa-spotify"></i>
+      <p class="logo-name">Spotify</p>
+    </header>
+    <main>
+      <aside class="aside">
+        <div class="radio-Btn" id="login-input">
+          <input
+            type="radio"
+            id="signin"
+            name="choice"
+            value="signin"
+            checked
+          />
+          <div class="circle"></div>
+          <label for="option1">Log in</label>
+        </div>
+        <div class="radio-Btn" id="signup-input">
+          <input type="radio" id="signup" name="choice" value="signup" />
+          <div class="circle"></div>
+          <label for="option2">Sign up</label>
+        </div>
+      </aside>
+
+      <form id="form" class="form active">
+        <h1>Welcome to spotify</h1>
+        <h5>please don not enter your real data</h5>
+
+        <div class="empty-space"></div>
+
+        <div class="login-form" id="login-form">
+          <div class="login-input">
+            <label for="username">Username </label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="login-input">
+            <label for="password">Password </label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div class="login-input signup-input">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" />
+          </div>
+          <div class="login-input signup-input">
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+        <button class="submit-btn" id="submit-btn">Log In</button>
+      </form>
+    </main>
+
+    <!--  -->
+    <script src="dist/home.js"></script>
+  </body>
+</html>

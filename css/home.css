@@ -1,0 +1,206 @@
+/*HEADER AND LOGO*/
+.navBar {
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+}
+.fa-brands {
+  font-size: 60px;
+  color: green;
+  padding-top: 2%;
+  padding-left: 1.5%;
+}
+.logo-name {
+  margin-top: 2%;
+  margin-left: 0.5%;
+  font-family: cursive;
+  font-size: 40px;
+  color: green;
+}
+/*MAIN PART*/
+main {
+  margin: 5%;
+  display: flex;
+  gap: 15%;
+  width: 70%;
+}
+/*LEFT PART*/
+aside {
+  border: 2px solid rgba(193, 193, 206, 0.607);
+  width: 170px;
+  height: 150px;
+  margin-top: 100px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3.5%;
+}
+.radio-Btn {
+  color: rgba(193, 193, 206, 0.607);
+  width: 170px;
+  display: flex;
+  font-size: 24px;
+}
+.radio-Btn input {
+  appearance: none;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: rgba(193, 193, 206, 0.607);
+  margin-top: 6px;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+}
+.radio-Btn input:hover {
+  scale: 1.2;
+  cursor: pointer;
+  box-shadow: none;
+}
+.radio-Btn .circle {
+  position: relative;
+  top: 0.49em;
+  left: -0.85em;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: rgba(21, 107, 10, 0.607);
+  scale: 0;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+}
+.radio-Btn input:checked {
+  box-shadow: none;
+  border: 2px solid rgba(21, 107, 10, 0.607);
+}
+.radio-Btn input:checked + .circle {
+  transform: rotate(360deg);
+  scale: 1;
+}
+/* FORM*/
+.form {
+  color: rgba(193, 193, 206, 0.607);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 230px;
+  padding: 3%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+form h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  white-space: nowrap;
+
+  color: rgba(193, 193, 206, 0.607);
+}
+form h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/*EMPTY SPACE DIV*/
+.empty-space {
+  background-color: red;
+  height: 10%;
+}
+/*LOGIN FORM*/
+.login-form {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 3px;
+}
+.login-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+  height: 50px;
+}
+.login-form input {
+  width: 250px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(193, 193, 206, 0.607);
+  outline: none;
+  margin-left: 0px;
+  color: aliceblue;
+}
+.login-form label {
+  position: absolute;
+  pointer-events: none;
+  transition: 0.5s;
+  left: 3px;
+  top: -5px;
+}
+
+/*ANIMATION FOR THE SIGN UP*/
+.login-form .login-input:nth-child(4) {
+  transform: translateX(600%);
+  transition: all 1.5s;
+}
+.login-form .login-input:nth-child(3) {
+  transform: translateX(-400%);
+  transition: all 1.5s;
+}
+.login-form.active .login-input:nth-child(3) {
+  transform: translateX(0%);
+  transition: all 1s;
+}
+.login-form.active .login-input:nth-child(4) {
+  transform: translateX(0%);
+  transition: all 1s;
+}
+.form.signup {
+  animation-name: minimizeHeight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.form.signin {
+  animation-name: maximizeHeight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes minimizeHeight {
+  from {
+    height: 350px;
+  }
+  to {
+    height: 230px;
+  }
+}
+@keyframes maximizeHeight {
+  from {
+    height: 230px;
+  }
+  to {
+    height: 350px;
+  }
+}
+
+/*SUBMIT BUTTON*/
+.submit-btn{
+  width: 90px;
+  padding: 10px;
+  border-radius: 17px;
+  border:2px solid rgba(193, 193, 206, 0.607);
+  background-color: transparent;
+  color: rgba(240, 248, 255, 0.409);
+  cursor: pointer;
+}
+.submit-btn:hover{
+  background-color: rgba(131, 172, 131, 0.189);
+}

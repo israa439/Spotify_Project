@@ -4,14 +4,14 @@ particlesJS(
   {
     particles: {
       number: {
-        value: 130,
+        value: 100,
         density: {
           enable: true,
-          value_area: 700,
+          value_area: 1000,
         },
       },
       color: {
-        value: "#ffffff",
+        value: "#808080",
       },
       shape: {
         type: "circle",
@@ -20,7 +20,7 @@ particlesJS(
           color: "#000000",
         },
         polygon: {
-          nb_sides: 5,
+          nb_sides: 10,
         },
         image: {
           src: "img/github.svg",
@@ -29,11 +29,11 @@ particlesJS(
         },
       },
       opacity: {
-        value: 0.5,
+        value: 0.3,
         random: false,
         anim: {
           enable: false,
-          speed: 1,
+          speed: 1.5,
           opacity_min: 0.1,
           sync: false,
         },
@@ -50,14 +50,14 @@ particlesJS(
       },
       line_linked: {
         enable: true,
-        distance: 150,
+        distance: 347,
         color: "#ffffff",
-        opacity: 0.4,
+        opacity: 0.2,
         width: 1,
       },
       move: {
         enable: true,
-        speed: 6,
+        speed: 2.5,
         direction: "none",
         random: false,
         straight: false,
@@ -73,31 +73,31 @@ particlesJS(
       detect_on: "canvas",
       events: {
         onhover: {
-          enable: false,
-          mode: "repulse",
+          enable: true,
+          mode: "push",
         },
         onclick: {
           enable: true,
-          mode: "repulse",
+          mode: "push",
         },
-        resize: true,
+        resize: false,
       },
       modes: {
         grab: {
           distance: 400,
           line_linked: {
-            opacity: 1,
+            opacity: 0.3,
           },
         },
         bubble: {
           distance: 400,
           size: 40,
           duration: 2,
-          opacity: 8,
+          opacity: 0.5,
           speed: 3,
         },
         repulse: {
-          distance: 200,
+          distance: 194,
         },
         push: {
           particles_nb: 4,
