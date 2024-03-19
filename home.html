@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="css/bg.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <script
-      src="https://kit.fontawesome.com/094df3e6f8.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <div id="particles-js"></div>
-    <header class="navBar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/bg.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="icon" type="image/x-icon" href="icons/spotify-favicon.png">
+  <script src="https://kit.fontawesome.com/094df3e6f8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <header class="navBar">
+    <div class="left-side-navbar">
       <i class="fa-brands fa-spotify"></i>
-      <p class="logo-name">Spotify</p>
-    </header>
-    <main>
-      <aside class="aside">
-        <div class="radio-Btn" id="login-input">
-          <input
-            type="radio"
-            id="signin"
-            name="choice"
-            value="signin"
-            checked
-          />
+    <p class="logo-name">Spotify</p>
+    </div>
+  </header>
+  <main>
+    <div class="left-container">
+      <aside class="aside aside-main">
+        <div class="radio-Btn" id="login-input" class="login-input">
+          <input type="radio" id="signin" name="choice" value="signin" checked />
           <div class="circle"></div>
           <label for="option1">Log in</label>
         </div>
-        <div class="radio-Btn" id="signup-input">
+        <div class="radio-Btn" id="signup-input" class="signup-input">
           <input type="radio" id="signup" name="choice" value="signup" />
           <div class="circle"></div>
           <label for="option2">Sign up</label>
@@ -47,26 +43,64 @@
         <div class="login-form" id="login-form">
           <div class="login-input">
             <label for="username">Username </label>
-            <input type="text" id="username" name="username" />
+            <input type="text" id="username" name="username" required/>
           </div>
           <div class="login-input">
             <label for="password">Password </label>
-            <input type="password" id="password" name="password" />
+            <input type="password" id="password" name="password" required />
           </div>
           <div class="login-input signup-input">
             <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" name="fullname" />
+            <input type="text" id="fullname" name="fullname" required/>
           </div>
           <div class="login-input signup-input">
             <label for="email">Email </label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" required/>
           </div>
         </div>
         <button class="submit-btn" id="submit-btn">Log In</button>
       </form>
-    </main>
+    </div>
+    <div class="right-side">
+      <div class="slide-container">
+        <div class="card">
+          <img src="images/music.png" />
+          <span class="span1">With Spotify, it’s easy to find the right music or podcast for
+            every
+          </span>
+          <span class="span2">
+            moment – on your phone,your computer, your tablet and more... </span>
+        </div>
+        <div class="card">
+          <img src="images/smallIcons.png" />
+          <span>whether you’re behind the wheel, working out, partying or
+            relaxing, the right music or podcast is always at
+            your fingertips.</span>
+        </div>
+        <div class="card">
+          <img src="images/radio.png" />
+          <span>Choose what you want to listen to, or let Spotify surprise
+            you.</span>
+        </div>
+        <div class="card">
+          <img src="images/spotifywhite.png" />
+          <span>Soundtrack your life with Spotify. Subscribe or listen for
+            free.♥</span>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <!--  -->
-    <script src="dist/home.js"></script>
-  </body>
+  <footer>
+    <hr />
+    <a href="https://github.com/israa439" target="_blank"><img class="github-icon" src="icons/github.png" /></a>
+    <a href="https://linkedin.com/in/asa-kanaan" target="_blank"><img class="linkedin-icon"
+        src="icons/linkedin.png" /></a>
+  </footer>
+
+  <script src="dist/particles.js"></script>
+  <script src="dist/bg.js"></script>
+  <script src="dist/home.js"></script>
+</body>
+
 </html>

@@ -1,3 +1,6 @@
+let cards = document.querySelectorAll(".card") as NodeListOf<HTMLDivElement>;
+let slideContainer = document.querySelector(".slide-container") as HTMLDivElement;
+let currentSlide = 0;
 function inputsAnimation() {
   let labels: NodeListOf<HTMLLabelElement> =
     document.querySelectorAll(".login-input label");
@@ -5,13 +8,12 @@ function inputsAnimation() {
   let inputs: NodeListOf<HTMLInputElement> =
     document.querySelectorAll(".login-input input");
   inputs.forEach((input, index) => {
-    let isFocused: boolean = false;
     input.addEventListener("focus", () => {
-      isFocused = true;
+    
       labels[index].style.transform = "translateY(-15px)";
     });
     input.addEventListener("blur", () => {
-      isFocused = false;
+      
       if (input.value.trim() === "") {
         labels[index].style.transform = "translateY(0)";
       }
@@ -36,24 +38,31 @@ function signupSwitch() {
       setTimeout(function () {
         form.classList.add("active");
       }, 800);
-
       submitBtn.textContent = "Sign Up";
     }
   });
-
-
   loginBtn.addEventListener("change", () => {
     if (loginBtn.checked) {
-      
       form.classList.remove("active");
       setTimeout(function () {
         conatainer.classList.add("signup");
         conatainer.classList.remove("signin");
       }, 800);
-
       submitBtn.textContent = "Log In";
     }
   });
 }
+function nextSlide() {
+  updateSlide();
+  currentSlide = (currentSlide + 1) % cards.length;
+}
+function updateSlide() {
+  const slideWidth =cards[0].clientWidth;
+  slideContainer.style.transform = `translateX(-${
+    currentSlide * slideWidth
+  }px)`;
+}
+setInterval(nextSlide, 4000);
 inputsAnimation();
 signupSwitch();
+

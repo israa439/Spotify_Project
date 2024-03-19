@@ -1,15 +1,15 @@
 "use strict";
+let cards = document.querySelectorAll(".card");
+let slideContainer = document.querySelector(".slide-container");
+let currentSlide = 0;
 function inputsAnimation() {
     let labels = document.querySelectorAll(".login-input label");
     let inputs = document.querySelectorAll(".login-input input");
     inputs.forEach((input, index) => {
-        let isFocused = false;
         input.addEventListener("focus", () => {
-            isFocused = true;
             labels[index].style.transform = "translateY(-15px)";
         });
         input.addEventListener("blur", () => {
-            isFocused = false;
             if (input.value.trim() === "") {
                 labels[index].style.transform = "translateY(0)";
             }
@@ -48,5 +48,14 @@ function signupSwitch() {
         }
     });
 }
+function nextSlide() {
+    updateSlide();
+    currentSlide = (currentSlide + 1) % cards.length;
+}
+function updateSlide() {
+    const slideWidth = cards[0].clientWidth;
+    slideContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
+setInterval(nextSlide, 4000);
 inputsAnimation();
 signupSwitch();
