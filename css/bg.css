@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 html {
   overflow: hidden;
+  height: 100vh;
 }
 body {
   font-family: "M PLUS 1p", sans-serif;
@@ -9,7 +10,7 @@ body {
   margin: 0px;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
  display: grid;
   grid-template-areas:
