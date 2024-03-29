@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 15vh;
-  grid-area: header;
+  /* grid-area: header; */
 }
 /*LEFT PART OF NAVBAR*/
 .left-side-navbar {
@@ -32,7 +32,8 @@ main {
   justify-content: space-between;
   width: 85%;
   margin: 3% auto;
-  grid-area: main / span 3;
+   flex-grow: 1;
+  /* grid-area: main / span 3; */
 }
 /*LEFT CONTAINER*/
 .left-container {
@@ -398,7 +399,7 @@ form h5 {
 /*FOOTER*/
 footer {
   text-align: center;
-  grid-area: footer;
+  /* grid-area: footer; */
 
   color: aliceblue;
   width: 100vw;
